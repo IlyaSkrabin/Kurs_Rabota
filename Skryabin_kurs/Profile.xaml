@@ -1,0 +1,238 @@
+﻿<Page x:Class="Skryabin_kurs.Profile"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Skryabin_kurs"
+      mc:Ignorable="d" 
+      d:DesignHeight="820" d:DesignWidth="713"
+      Title="Profile" >
+    <Border BorderThickness="1" BorderBrush="#FF000000"
+        VerticalAlignment="Top">
+        <Grid Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="400"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Border Width="272" Height="272" Margin="0,125,64,298" Background="Gray" VerticalAlignment="Top">
+                <Image Source="login.png" HorizontalAlignment="Right" Width="272" Height="272" VerticalAlignment="Bottom"/>
+            </Border>
+            <StackPanel Orientation="Vertical" Width="352" HorizontalAlignment="Left" Margin="341,71,0,233" Grid.ColumnSpan="2">
+                <TextBlock Text="" FontSize="28" Width="80" Foreground="Black" Margin="0,0,200,0"></TextBlock>
+                <TextBox x:Name="NameTb"  Margin="0,0,0,0" Padding="0,0,0,0" HorizontalAlignment="Center" VerticalContentAlignment="Center" FontSize="34" Height="67" Width="341">
+                    <TextBox.Template>
+                        <ControlTemplate>
+                            <Border x:Name="border1" CornerRadius="10"
+                        BorderBrush="#000000" BorderThickness="1" SnapsToDevicePixels="True" >
+                                <ScrollViewer x:Name="PART_ContentHost" Focusable="false"/>
+                            </Border>
+                        </ControlTemplate>
+                    </TextBox.Template>
+                </TextBox>
+                <TextBlock Text="" FontSize="28" Width="80" Height="53" Foreground="Black" Margin="0,0,200,0"></TextBlock>
+                <TextBox  x:Name="EmailTb" Margin="0,0,0,0" Padding="0,0,0,0" HorizontalAlignment="Center" VerticalContentAlignment="Center" FontSize="34" Height="67" Width="341">
+                    <TextBox.Template>
+                        <ControlTemplate>
+                            <Border x:Name="border1" CornerRadius="10"
+                        BorderBrush="#000000" BorderThickness="1" SnapsToDevicePixels="True" >
+                                <ScrollViewer x:Name="PART_ContentHost" Focusable="false"/>
+                            </Border>
+                        </ControlTemplate>
+                    </TextBox.Template>
+                </TextBox>
+                <TextBlock Text="" FontSize="28" Width="120" Height="53" Foreground="Black" Margin="0,0,180,0"></TextBlock>
+                <TextBox  x:Name="PhoneTb"  Margin="0,0,0,0" Padding="0,0,0,0" HorizontalAlignment="Center" VerticalContentAlignment="Center" FontSize="34" Height="67" Width="341">
+                    <TextBox.Template>
+                        <ControlTemplate>
+                            <Border x:Name="border1" CornerRadius="10"
+                        BorderBrush="#000000" BorderThickness="1" SnapsToDevicePixels="True" >
+                                <ScrollViewer x:Name="PART_ContentHost" Focusable="false"/>
+                            </Border>
+                        </ControlTemplate>
+                    </TextBox.Template>
+                </TextBox>
+                <TextBlock Text="" FontSize="28" Width="120" Height="36" Foreground="Black" Margin="26,0,206,0"></TextBlock>
+                <Button x:Name="btnPass"
+            Width="104"
+            Height="50"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Background="#ff1d222c"
+            Foreground="White"
+            Content="Выйти"
+            FontSize="20"
+            Margin="-35,0,283,0" Click="btnEXit_click">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}" >
+                            <Setter Property="Foreground" Value="#a0a0a0"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border x:Name="ButtonBackground" BorderBrush="Gray">
+                                            <Border.BorderThickness>
+                                                <Thickness>0</Thickness>
+                                            </Border.BorderThickness>
+                                            <Border.CornerRadius>
+                                                <CornerRadius>5</CornerRadius>
+                                            </Border.CornerRadius>
+                                            <Border.Background>
+                                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                    <GradientStop Color="#FF7A00" Offset="0" />
+                                                    <GradientStop Color="#FF7A00" Offset="1" />
+                                                </LinearGradientBrush>
+                                            </Border.Background>
+                                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="ButtonBackground" Property="Background">
+                                                    <Setter.Value>
+                                                        <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1" >
+                                                            <GradientStop Color="#ff232d3e" Offset="0" />
+                                                            <GradientStop Color="#ff232d3e" Offset="0.75" />
+                                                            <GradientStop Color="#ff232d3e" Offset="0.75" />
+                                                            <GradientStop Color="#ff232d3e" Offset="1" />
+                                                        </LinearGradientBrush>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Trigger>
+
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+
+
+            </StackPanel>
+            <Line Stroke="Black" StrokeThickness="1" X1="0" Y1="0" X2="220" Y2="0" Margin="0,538,170,272"/>
+            <Line Stroke="Black" StrokeThickness="1" X1="220" Y1="0" X2="0" Y2="0" Margin="0,538,0,272" Grid.Column="1" HorizontalAlignment="Right"/>
+            <TextBox  x:Name="PasswordNewTb" Margin="185,671,181,80" Padding="0,0,0,0" HorizontalAlignment="Center" VerticalContentAlignment="Center" FontSize="34" Height="67" Width="345" Text="{Binding User.Password}" Grid.ColumnSpan="2">
+                <TextBox.Template>
+                    <ControlTemplate>
+                        <Border x:Name="border1" CornerRadius="10"
+                        BorderBrush="#000000" BorderThickness="1" SnapsToDevicePixels="True" >
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false"/>
+                        </Border>
+                    </ControlTemplate>
+                </TextBox.Template>
+            </TextBox>
+            <TextBox  x:Name="PasswordOldTb" Margin="185,573,181,178" Padding="0,0,0,0" HorizontalAlignment="Center" VerticalContentAlignment="Center" FontSize="34" Height="67" Width="345" Grid.ColumnSpan="2">
+                <TextBox.Template>
+                    <ControlTemplate>
+                        <Border x:Name="border1" CornerRadius="10"
+                        BorderBrush="#000000" BorderThickness="1" SnapsToDevicePixels="True" >
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false"/>
+                        </Border>
+                    </ControlTemplate>
+                </TextBox.Template>
+            </TextBox>
+            <Button
+            x:Name="btn"
+                Grid.Column="1"
+            Width="92"
+            Height="40"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Background="{x:Null}"
+            Foreground="Black"
+            
+            FontSize="17"
+            Margin="221,0,0,0" Click="btnPass_click" BorderBrush="{x:Null}">
+                <Button.Content>
+                    <TextBlock>
+            <Underline>Закрыть</Underline>
+                    </TextBlock>
+                </Button.Content>
+                <Button.Style>
+                    <Style TargetType="Button" >
+                        <Setter Property="Foreground" Value="#a0a0a0"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border x:Name="ButtonBackground" BorderBrush="Gray">
+                                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                        <Border.BorderThickness>0</Border.BorderThickness>
+                                        <Border.CornerRadius>10</Border.CornerRadius>
+                                        <Border.Background>
+                                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                <GradientStop Color="#FFFFFF" Offset="0" />
+                                                <GradientStop Color="#FFFFFF" Offset="1" />
+                                            </LinearGradientBrush>
+                                        </Border.Background>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter TargetName="ButtonBackground" Property="Background">
+                                                <Setter.Value>
+                                                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1" >
+                                                        <GradientStop Color="#ff232d3e" Offset="0" />
+                                                        <GradientStop Color="#ff232d3e" Offset="0.75" />
+                                                        <GradientStop Color="#ff232d3e" Offset="0.75" />
+                                                        <GradientStop Color="#ff232d3e" Offset="1" />
+                                                    </LinearGradientBrush>
+                                                </Setter.Value>
+                                            </Setter>
+                                        </Trigger>
+
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Button x:Name="btnSave"
+            Width="346"
+            Height="50"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Right"
+            Background="#ff1d222c"
+            Foreground="White"
+            Content="Сохранить данные"
+            FontSize="20"
+            Margin="0,0,181,10" Click="btnSave_click" Grid.ColumnSpan="2">
+                <Button.Style>
+                    <Style TargetType="Button" >
+                        <Setter Property="Foreground" Value="#a0a0a0"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border x:Name="ButtonBackground" BorderBrush="Gray">
+                                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                        <Border.BorderThickness>0</Border.BorderThickness>
+                                        <Border.CornerRadius>5</Border.CornerRadius>
+                                        <Border.Background>
+                                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                <GradientStop Color="#FF7A00" Offset="0" />
+                                                <GradientStop Color="#FF7A00" Offset="1" />
+                                            </LinearGradientBrush>
+                                        </Border.Background>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter TargetName="ButtonBackground" Property="Background">
+                                                <Setter.Value>
+                                                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1" >
+                                                        <GradientStop Color="#ff232d3e" Offset="0" />
+                                                        <GradientStop Color="#ff232d3e" Offset="0.75" />
+                                                        <GradientStop Color="#ff232d3e" Offset="0.75" />
+                                                        <GradientStop Color="#ff232d3e" Offset="1" />
+                                                    </LinearGradientBrush>
+                                                </Setter.Value>
+                                            </Setter>
+                                        </Trigger>
+
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <TextBlock Margin="258,516,0,0" TextWrapping="Wrap" Text="Поменять пароль" VerticalAlignment="Top" FontSize="24" Grid.ColumnSpan="2" Width="200" HorizontalAlignment="Left" TextAlignment="Center"/>
+        </Grid>
+    </Border>
+</Page>
